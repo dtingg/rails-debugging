@@ -6,6 +6,7 @@
       <tr>
         <th>OS</th>
         <th>Count</th>
+        <th>Percentage</th>
       </tr>
     </thead>
     <tbody>
@@ -17,7 +18,10 @@
             <%= os.title %>
           </td>
           <td>
-            <%= count %> (<%= ((count.to_f / total) * 100) %>%)
+            <%= count %>
+          </td>
+          <td>
+            <%= ((count.to_f / total) * 100).round(1) %>%
           </td>
         </tr>
       <% end %>
